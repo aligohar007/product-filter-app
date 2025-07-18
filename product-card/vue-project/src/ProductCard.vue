@@ -95,9 +95,9 @@ const fetchData = (async () => {
     const data = await response.json();
 
     prductdata.value = data;
-    // Store the original data for filtering
+    // Store the original data for filtering......
     originalData.value = data;
-    // Extract unique categories from the data
+    // Extract unique categories from the data.......
     categories.value = [...new Set(data.map((p) => p.category))]
   } catch (err) {
     console.error('Error fetching data:', err);
@@ -106,7 +106,6 @@ const fetchData = (async () => {
     loading.value = false;
   }
 })
-
 const filterByCategory = () => {
   loading.value = true;
 
